@@ -1,0 +1,81 @@
+package com.example.main.entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "sale_course")
+public class SaleCourse 
+{
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int id;
+	
+	@Column(name = "cust_phoneno")
+	private String custphoneno;
+	
+	@Column(name = "course_name")
+	private String coursename;
+	
+	@Column(name = "emp_emailid")
+	private String empemailid;
+	
+	@Column(name = "purchased_date")
+	private String date;
+	
+	@Column(name = "purchased_time")
+	private String time;
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getCustphoneno() {
+		return custphoneno;
+	}
+
+	public void setCustphoneno(String custphoneno) {
+		this.custphoneno = custphoneno;
+	}
+	
+	public String getCoursename() {
+		return coursename;
+	}
+
+	public void setCoursename(String coursename) {
+		this.coursename = coursename;
+	}
+
+	public String getEmpemailid() {
+		return empemailid;
+	}
+
+	public void setEmpemailid(String empemailid) {
+		this.empemailid = empemailid;
+	}
+
+	public String getDate() {
+		return date;
+	}
+
+	public void setDate(String date) {
+		this.date = date;
+	}
+
+	public String getTime() {
+		return time;
+	}
+
+	public void setTime(String time) {
+		this.time = time;
+	}
+	
+}
